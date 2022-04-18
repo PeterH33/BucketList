@@ -11,6 +11,7 @@
 		4CD0DA87280B64FC0053D3EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0DA86280B64FC0053D3EE /* ContentView.swift */; };
 		4CD0DA89280B64FD0053D3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD0DA88280B64FD0053D3EE /* Assets.xcassets */; };
 		4CD0DA8C280B64FD0053D3EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD0DA8B280B64FD0053D3EE /* Preview Assets.xcassets */; };
+		4CD0DA93280B679B0053D3EE /* FileManagerDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0DA92280B679B0053D3EE /* FileManagerDecode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4CD0DA86280B64FC0053D3EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CD0DA88280B64FD0053D3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD0DA8B280B64FD0053D3EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CD0DA92280B679B0053D3EE /* FileManagerDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerDecode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4CD0DA84280B64FC0053D3EE /* BucketListApp.swift */,
 				4CD0DA86280B64FC0053D3EE /* ContentView.swift */,
+				4CD0DA92280B679B0053D3EE /* FileManagerDecode.swift */,
 				4CD0DA88280B64FD0053D3EE /* Assets.xcassets */,
 				4CD0DA8A280B64FD0053D3EE /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD0DA93280B679B0053D3EE /* FileManagerDecode.swift in Sources */,
 				4CD0DA87280B64FC0053D3EE /* ContentView.swift in Sources */,
 				4CD0DA85280B64FC0053D3EE /* BucketListApp.swift in Sources */,
 			);
