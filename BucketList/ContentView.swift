@@ -16,12 +16,12 @@ struct ContentView: View {
         Text("Hello World")
             .onTapGesture {
                 let str = "Test Message"
-                let url = FileManager.default.getDocumentsDirectory().appendingPathComponent("message.txt")
-
+                
+                let fileName = "message.txt"
                 do {
-                    try str.write(to: url, atomically: true, encoding: .utf8)
-                    let input = try String(contentsOf: url)
-                    print(input)
+                    try FileManager.default.encode(str, toFile: fileName)
+                    let input = try FileManager.default.decode(fileName, dataType: "String")
+                    print("Here is the file decoded \(input ?? "ERROR FAILURE")")
                 } catch {
                     print(error.localizedDescription)
                 }
