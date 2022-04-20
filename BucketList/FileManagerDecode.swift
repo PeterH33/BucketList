@@ -9,14 +9,15 @@ import Foundation
 
 import SwiftUI
 
-
+//This extension is for the storing and retrieving of data in the Documents directory of a program via json
 extension FileManager {
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
 
-    func decode<T: Codable>(_ fromFile: String, dataType: T) -> T? {
+    //example call ** let test: String? = FileManager.default.decode("Message.txt") **
+    func decode<T: Codable>(_ fromFile: String) -> T? {
         let url = getDocumentsDirectory().appendingPathComponent(fromFile)
         let decoder = JSONDecoder()
 

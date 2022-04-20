@@ -82,7 +82,7 @@ struct ContentView: View {
     func authenticate() {
         let context = LAContext()
         var error: NSError?
-
+        
         // check whether biometric authentication is possible
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             // it's possible, so go ahead and use it
