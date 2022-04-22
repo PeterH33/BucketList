@@ -89,6 +89,7 @@ struct ContentView: View {
             EditView(location: place) { newLocation in
                 viewModel.update(location: newLocation)
             }
+            
         }
         .alert("Authentication Failed Try again", isPresented: $viewModel.authFailed){
             Button("OK"){}
