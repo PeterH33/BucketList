@@ -61,6 +61,11 @@ extension ContentView{
             }
         }
         
+        func deleteLocation(deleteThis: Location){
+            locations.removeAll() {$0 == deleteThis  }
+            save()
+        }
+        
         @Published var isUnlocked = false
         @Published var authFailed = false
         //TODO  add in a failure count to swap over to a code based system after several fails, also just put in a button to go straight to number code instead of face

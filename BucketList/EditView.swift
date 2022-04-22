@@ -14,10 +14,11 @@ struct EditView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: ViewModel
     var onSave: (Location) -> Void
-    
+    var onDelete: (Location) -> Void
    
-    init(location: Location, onSave: @escaping (Location) -> Void) {
+    init(location: Location, onSave: @escaping (Location) -> Void, onDelete: @escaping (Location) -> Void) {
         self.onSave = onSave
+        self.onDelete = onDelete
         self._viewModel = StateObject(wrappedValue: ViewModel(location: location))
     }
     
@@ -50,14 +51,23 @@ struct EditView: View {
             }
             .navigationTitle("Place details")
             .toolbar {
-                Button("Save") {
-                    var newLocation = viewModel.location
-                    newLocation.id = UUID()
-                    newLocation.name = viewModel.name
-                    newLocation.description = viewModel.description
-                    
-                    onSave(newLocation)
-                    dismiss()
+                ToolbarItemGroup(placement: .bottomBar){
+                    Button("Delete", role: .destructive){
+                        
+                        let deleteLocation = viewModel.location
+                        onDelete(deleteLocation)
+                        dismiss()
+                        //TODO get a verification message for the delete
+                    }
+                    Button("Save") {
+                        var newLocation = viewModel.location
+                        newLocation.id = UUID()
+                        newLocation.name = viewModel.name
+                        newLocation.description = viewModel.description
+                        
+                        onSave(newLocation)
+                        dismiss()
+                    }
                 }
             }
             .task {//This will kick off as soon as the view is loaded
@@ -71,8 +81,3 @@ struct EditView: View {
     
 }//End EditView Struct
 
-struct EditView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditView(location: Location.example) { newLocation in }
-    }
-}
