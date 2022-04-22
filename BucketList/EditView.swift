@@ -13,6 +13,7 @@ struct EditView: View {
     
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: ViewModel
+    @State private var showingDeleteConfirm = false
     var onSave: (Location) -> Void
     var onDelete: (Location) -> Void
    
@@ -54,9 +55,7 @@ struct EditView: View {
                 ToolbarItemGroup(placement: .bottomBar){
                     Button("Delete", role: .destructive){
                         
-                        let deleteLocation = viewModel.location
-                        onDelete(deleteLocation)
-                        dismiss()
+                        showingDeleteConfirm = true
                         //TODO get a verification message for the delete
                     }
                     Button("Save") {
@@ -72,6 +71,14 @@ struct EditView: View {
             }
             .task {//This will kick off as soon as the view is loaded
                 await viewModel.fetchNearbyPlaces()
+            }
+            .alert("Are you sure you want to delete this location?", isPresented: $showingDeleteConfirm) {
+                Button("Delete", role: .destructive) {
+                    let deleteLocation = viewModel.location
+                    onDelete(deleteLocation)
+                    dismiss()
+                }
+                Button("Cancel", role: .cancel) { }
             }
         }
     }// End Body View
