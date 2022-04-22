@@ -62,6 +62,8 @@ extension ContentView{
         }
         
         @Published var isUnlocked = false
+        @Published var authFailed = false
+        //TODO  add in a failure count to swap over to a code based system after several fails, also just put in a button to go straight to number code instead of face
         func authenticate() {
             let context = LAContext()
             var error: NSError?
@@ -79,6 +81,9 @@ extension ContentView{
                             self.isUnlocked = true
                         }
                     } else {
+                        Task { @MainActor in
+                            self.authFailed = true //This should trigger the alert for an auth failed message
+                        }
                         // there was a problem, auth failed write code to try again or to go with keypad instead
                     }
                 }

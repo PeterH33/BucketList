@@ -16,6 +16,7 @@
 		4CD0DA89280B64FD0053D3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD0DA88280B64FD0053D3EE /* Assets.xcassets */; };
 		4CD0DA8C280B64FD0053D3EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD0DA8B280B64FD0053D3EE /* Preview Assets.xcassets */; };
 		4CD0DA93280B679B0053D3EE /* FileManagerDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0DA92280B679B0053D3EE /* FileManagerDecode.swift */; };
+		4CE480A52812F2F500D06A0C /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE480A42812F2F500D06A0C /* EditView-ViewModel.swift */; };
 		4CEF0EA7281042F30092F1DE /* result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF0EA6281042F30092F1DE /* result.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		4CD0DA88280B64FD0053D3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD0DA8B280B64FD0053D3EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CD0DA92280B679B0053D3EE /* FileManagerDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerDecode.swift; sourceTree = "<group>"; };
+		4CE480A42812F2F500D06A0C /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 		4CEF0EA6281042F30092F1DE /* result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				4CD0DA84280B64FC0053D3EE /* BucketListApp.swift */,
 				4CD0DA86280B64FC0053D3EE /* ContentView.swift */,
 				4C82D09E28118AFA00736F4D /* ContentView-ViewModel.swift */,
+				4CE480A42812F2F500D06A0C /* EditView-ViewModel.swift */,
 				4CEF0EA6281042F30092F1DE /* result.swift */,
 				4C0600C8280F037000A258F2 /* EditView.swift */,
 				4CD0DA92280B679B0053D3EE /* FileManagerDecode.swift */,
@@ -160,6 +163,7 @@
 				4CD0DA87280B64FC0053D3EE /* ContentView.swift in Sources */,
 				4C0600C7280EF64900A258F2 /* location.swift in Sources */,
 				4CEF0EA7281042F30092F1DE /* result.swift in Sources */,
+				4CE480A52812F2F500D06A0C /* EditView-ViewModel.swift in Sources */,
 				4C82D09F28118AFA00736F4D /* ContentView-ViewModel.swift in Sources */,
 				4C82D0A1281198CD00736F4D /* FileManager-DocumentsDirectory.swift in Sources */,
 				4CD0DA85280B64FC0053D3EE /* BucketListApp.swift in Sources */,
