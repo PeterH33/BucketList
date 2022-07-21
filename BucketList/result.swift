@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//TODO extract the function from Edit view fetchNearbyPlaces() and make it a useful standalone function for pulling wikipedial information.
+//TODO extract the function from Edit view fetchNearbyPlaces() and make it a useful standalone function for pulling Wikipedia information.
 
 //This struct is used to show information pulled out of wikipedia
 //Wikipedia’s API sends back JSON data in a precise format, so we need to do a little work to define Codable structs capable of storing it all. The structure is this:

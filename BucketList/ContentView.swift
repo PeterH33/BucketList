@@ -20,7 +20,8 @@ import LocalAuthentication
 struct ContentView: View {
     
     @StateObject var viewModel: ViewModel
-    //This init() goes along with the @StateObject -> MainActor architecture in order to eliminate problems at compile time, will be an error in xcode 6 initializers are not async, this clears it up
+    //This init() goes along with the @StateObject -> MainActor architecture in order to eliminate problems at compile time, will be an error in Xcode 6 initializers are not async, this clears it up.
+    //TODO: Apple went back on this change, remove it when I have time
     init() {
         self._viewModel = StateObject(wrappedValue: ViewModel())
     }

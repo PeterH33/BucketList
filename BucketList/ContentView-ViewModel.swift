@@ -11,12 +11,12 @@ import LocalAuthentication
 
 extension ContentView{
     
-    //@MainACtor is nessisary when the class is going to be working on the UI and looking for updates there, swift can infer it often.
+    //@MainACtor is necessary when the class is going to be working on the UI and looking for updates there, swift can infer it often.
     @MainActor class ViewModel: ObservableObject{
         
         init() {
             do {
-                //trys to load up the data from the save file path on initial load.
+                //tries to load up the data from the save file path on initial load.
                 let data = try Data(contentsOf: savePath)
                 locations = try JSONDecoder().decode([Location].self, from: data)
             } catch {
@@ -24,7 +24,7 @@ extension ContentView{
             }
         }
         
-        //Map location state that starts off over europe and will track the centerpoint of the map.
+        //Map location state that starts off over Europe and will track the center-point of the map.
         //in mvvm these would be states and private, using them in a class like this we label them as @published and make them public
         @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
         
@@ -48,7 +48,7 @@ extension ContentView{
             save()
         }
         
-        //Just to store the save file and keep it consistant.
+        //Just to store the save file and keep it consistent.
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
         func save() {
